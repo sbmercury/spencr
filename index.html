@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spencr.me</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's client-side javascript file -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        Spencr.me
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Oh hi,</p>
+
+      <p>Create or Update a Short Code</p>
+
+          <form action="/api" method="post">
+            <p><code>POST /api/</code></p>
+            <input id="code" type="text" name="code" placeholder="amazon">
+            <input id="url" type="text" name="url" placeholder="https://amazon.com">
+            <input onclick="testClick()" type="submit" value="Submit">
+          </form>
+		  <script>
+		     function testClick() {
+                		str = "https://spencr.me/" + document.getElementById('code').value;
+		            const el = document.createElement('textarea');
+			    el.value = str;
+			    document.body.appendChild(el);
+			    el.select();
+			    document.execCommand('copy');
+			    document.body.removeChild(el);
+			 }
+		  </script>
+        </main>
+
+      </body>
+    </html>
