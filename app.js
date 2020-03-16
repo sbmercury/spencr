@@ -1,5 +1,7 @@
 'use strict';
 
+module.exports = server
+
 var express = require('express');
 var app = express();
 app.use(express.static('public'));
@@ -16,10 +18,6 @@ var cors = require('cors');
 
 var helmet = require('helmet');
 app.use(helmet());
-
-// Basic Configuration
-var port = process.env.PORT || 3000;
-
 
 mongoose.connect(process.env.DATABASE, {useUnifiedTopology: true, useNewUrlParser: true});
 

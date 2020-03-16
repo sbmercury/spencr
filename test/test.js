@@ -1,11 +1,17 @@
-import * as http from 'http';
-import * as supertest from 'supertest';
-import * as test from 'tape';
-
-import app from '../app';
-const apptest = supertest(http.createServer(app.callback()));
-
-test('GET /', (t) => {
-    apptest.get('/')
-    .expect(200, done)
+var request = require('supertest');
+ 
+var app = require('../app.js');
+ 
+ 
+ 
+describe('GET /', function() {
+ 
+  it('check for 200 reponse code', function(done) {
+ 
+    request(app)
+		.get('/')
+		.expect(200, done);
+ 
+  });
+ 
 });
