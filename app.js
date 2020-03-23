@@ -71,4 +71,4 @@ const listener = app.listen(process.env.PORT || 8070, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-module.exports = app.listen(8070);
+module.exports = listener;
