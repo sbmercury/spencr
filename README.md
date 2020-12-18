@@ -1,12 +1,33 @@
-This is a very simple implementation of a URL shortener using a domain that I own, spencr.me. It's fully functional and allows the user to quickly add or update shortcodes that point to a full domain. The full version can be used at spencr.me
+# Spencr.me
 
----
-This app uses:
+Racket is a simple reimbursement tracking system, originally designed to help me keep track
+of things that my parents owed me money for.
 
--NodeJS/Express
+## Features
 
--MongoDB (for storing shortcodes)
+- Quickly add new codes and have the short URL added to your clipboard 
+immediately after submitting
 
----
 
-My personal version uses Jenkins to automatically deploy changes to a DigitalOcean VPS that it's hosted on.
+- Simple redirects for shortcodes that have been added
+
+
+## Installation
+
+#### Linux
+
+- Install packages
+
+`npm install`
+
+- Set environment variables
+
+`process.env.PORT: sets what port the app will run on (default 8070)`   
+`process.env.DATABASE: a mongoDB connection URL, used to store codes and associated URLs`
+
+
+- Start the app
+
+`node app.js`
+
+

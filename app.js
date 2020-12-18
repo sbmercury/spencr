@@ -1,6 +1,6 @@
 'use strict';
 
-//Set up a webserver usig express
+//Set up a webserver using express
 var express = require('express');
 var app = express();
 app.use(express.static('public')); //loads static content (css files) from public folder
