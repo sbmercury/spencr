@@ -1,8 +1,8 @@
 # Spencr.me
 
-Racket is a simple reimbursement tracking system, originally designed to help me keep track
-of things that my parents owed me money for.
-
+Spencr is a simple URL shortener, enter a shortcode and URL and it will 
+create a shortcode on spencr.me for that URL.  
+You can go to https://spencr.me to try it out.
 ## Features
 
 - Quickly add new codes and have the short URL added to your clipboard 
