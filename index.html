@@ -10,7 +10,6 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
 
-    <!-- import the webpage's client-side javascript file -->
   </head>
   <body>
     <header>
@@ -23,7 +22,7 @@
       <p class="bold">Oh hi,</p>
 
       <p>Create or Update a Short Code</p>
-
+          <!-- Form for creating a new shortcode -->
           <form action="/api" method="post">
             <p><code>POST /api/</code></p>
             <input id="code" type="text" name="code" placeholder="amazon">
@@ -31,15 +30,16 @@
             <input onclick="testClick()" type="submit" value="Submit">
           </form>
 		  <script>
-		     function testClick() {
-                		str = "https://spencr.me/" + document.getElementById('code').value;
-		            const el = document.createElement('textarea');
-			    el.value = str;
-			    document.body.appendChild(el);
-			    el.select();
-			    document.execCommand('copy');
-			    document.body.removeChild(el);
-			 }
+            //Function to copy the shortened URL to the user's clipboard
+            function testClick() {
+               str = "https://spencr.me/" + document.getElementById('code').value;
+               const el = document.createElement('textarea');
+               el.value = str;
+               document.body.appendChild(el);
+               el.select();
+               document.execCommand('copy'); //Select the generated code then copy to clipboard
+               document.body.removeChild(el); //Remove created text area to clean up
+            }
 		  </script>
         </main>
 
