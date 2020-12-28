@@ -1,4 +1,4 @@
-# Spencr.me
+# Spencr.me ![<CircleCI>](https://circleci.com/gh/sbmercury/spencr.svg?style=shield)
 
 Spencr is a simple URL shortener, enter a shortcode and URL and it will 
 create a shortcode on spencr.me for that URL.  
@@ -28,6 +28,6 @@ immediately after submitting
 
 - Start the app
 
-`node app.js`
+`npm start`
 
 

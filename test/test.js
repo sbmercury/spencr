@@ -1,17 +1,11 @@
-var request = require('supertest');
+const app = require("../app.js");
+const request = require('supertest')(app);
  
-var app = require('../app.js');
- 
- 
- 
-describe('GET /', function() {
- 
-  it('check for 200 reponse code', function(done) {
- 
-    request(app)
+describe('Homepage', function() {
+  it('check for 200 response code', function(done) {
+    request
 		.get('/')
 		.expect(200)
         .end(done);
   });
- 
 });
