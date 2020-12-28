@@ -7,10 +7,16 @@ jobs:
       - image: cimg/node:13.11.0
     steps:
       - checkout
-      - run: chmod +x ./scripts/deploy
-      - run: ./scripts/deploy
+      - run:
+          name: Setting command file permissions
+          command:  chmod +x ./scripts/deploy
+      - run:
+          name: Running VPS deploy script
+          command:  npm run deploy
 workflows:
   node-tests:
     jobs:
       - node/test
-      - deploy
+      - deploy:
+          requires:
+            - node/test
