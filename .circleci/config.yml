@@ -5,3 +5,12 @@ workflows:
   node-tests:
     jobs:
       - node/test
+      - node/deploy
+        docker:
+        - image: cimg/node:13.11.0
+        steps:
+        - checkout
+        - run:
+            command: "npm deploy"
+        name: Deploying to VPS
+        working_directory: ~/project
