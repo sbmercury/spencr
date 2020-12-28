@@ -7,7 +7,7 @@ jobs:
       - image: cimg/node:13.11.0
     steps:
       - checkout
-      - run: npm deploy
+      - run: npm run deploy
 workflows:
   node-tests:
     jobs:
