@@ -7,7 +7,9 @@ jobs:
       - image: cimg/node:13.11.0
     steps:
       - checkout
-      - run: npm run deploy
+      - run: chmod +x ./scripts/deploy
+      - run: ./scripts/deploy
+    name: "Deploy to VPS"
 workflows:
   node-tests:
     jobs:
