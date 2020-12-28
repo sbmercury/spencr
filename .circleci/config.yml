@@ -9,7 +9,6 @@ jobs:
       - checkout
       - run: chmod +x ./scripts/deploy
       - run: ./scripts/deploy
-    name: "Deploy to VPS"
 workflows:
   node-tests:
     jobs:
