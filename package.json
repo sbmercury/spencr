@@ -12,10 +12,10 @@
     "deploy": "./scripts/deploy"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mongoose": "^5.6.12",
     "mongodb": "^3.3.2",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "helmet": "^3.21.0",
     "dotenv": "^8.2.0"
